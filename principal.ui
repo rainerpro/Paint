@@ -55,51 +55,89 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNUEVO">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/nueva-pagina.png</normaloff>:/Recursos/nueva-pagina.png</iconset>
+   </property>
    <property name="text">
     <string>NUEVO</string>
    </property>
   </action>
   <action name="actionGUARDAR">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/guardar-el-archivo.png</normaloff>:/Recursos/guardar-el-archivo.png</iconset>
+   </property>
    <property name="text">
     <string>GUARDAR</string>
    </property>
   </action>
   <action name="actionSALIR">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/cerrar-sesion.png</normaloff>:/Recursos/cerrar-sesion.png</iconset>
+   </property>
    <property name="text">
     <string>SALIR</string>
    </property>
   </action>
   <action name="actionCOLOR">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/circulo-de-color.png</normaloff>:/Recursos/circulo-de-color.png</iconset>
+   </property>
    <property name="text">
     <string>COLOR</string>
    </property>
   </action>
   <action name="actionANCHO">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/ancho-del-texto.png</normaloff>:/Recursos/ancho-del-texto.png</iconset>
+   </property>
    <property name="text">
     <string>ANCHO</string>
    </property>
   </action>
   <action name="actionLIBRE">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/cepillo-de-pintura.png</normaloff>:/Recursos/cepillo-de-pintura.png</iconset>
+   </property>
    <property name="text">
     <string>LIBRE</string>
    </property>
   </action>
   <action name="actionLINEAS">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/linea-diagonal.png</normaloff>:/Recursos/linea-diagonal.png</iconset>
+   </property>
    <property name="text">
     <string>LINEAS </string>
    </property>
   </action>
   <action name="actionCIRCUFERENCIA">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/circle-shape.png</normaloff>:/Recursos/circle-shape.png</iconset>
+   </property>
    <property name="text">
     <string>CIRCUFERENCIA</string>
    </property>
   </action>
   <action name="actionRECTANGULOS">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/rectangulo.png</normaloff>:/Recursos/rectangulo.png</iconset>
+   </property>
    <property name="text">
     <string>RECTANGULOS </string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
