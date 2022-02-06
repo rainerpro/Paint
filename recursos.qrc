@@ -10,5 +10,6 @@
         <file>Recursos/circulo-de-color.png</file>
         <file>Recursos/linea-diagonal.png</file>
         <file>Recursos/rectangulo.png</file>
+        <file>Recursos/RELLENO.PNG</file>
     </qresource>
 </RCC>

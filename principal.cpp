@@ -16,13 +16,18 @@ principal::principal(QWidget *parent)
     m_painter = new QPainter(m_imagen);
     m_painter->setRenderHint(QPainter::Antialiasing);
     m_color = Qt::black;
+    m_Orden=0;
     m_width = DEFAULT_ANCHO;
+    m_numlineas=0;
     m_opcion = 1;
+    m_Brush= Qt::transparent;
 }
 
 principal::~principal()
 {
     delete ui;
+    delete m_painter;
+    delete m_imagen;
 }
 
 void principal::paintEvent(QPaintEvent *event)
@@ -96,12 +101,37 @@ void principal::mouseMoveEvent(QMouseEvent *event)
         m_ptFinal = event->pos();
         QPen pincel;
         pincel.setColor(m_color);
+        pincel.setBrush(m_Brush);
         pincel.setWidth(m_width);
         m_painter->setPen(pincel);
         m_painter->drawLine(m_ptInicial, m_ptFinal);
+        m_painter->setBrush(m_Brush);
+        m_ptInicial = m_ptFinal;
+        if(m_Orden==1&&ui->actionLIBRE->isChecked()){
+        dibujarLineas();
+        m_ptInicial = m_ptFinal;
+        }
+
     }
     update();
-    m_ptInicial = m_ptFinal;
+}
+
+void principal::dibujarLineas()
+{
+    m_painter->drawLine(m_ptInicial, m_ptFinal);
+    // Mostrar el número de líneas en la barra de estado
+    ui->statusbar->showMessage("Número de líneas: " + QString::number(++m_numlineas));
+    // Actualizar la interfaz
+    update();
+}
+
+void principal::lineaUnica()
+{
+    m_painter->drawLine(m_ptInicial, m_ptFinal);
+    // Mostrar el número de líneas en la barra de estado
+    ui->statusbar->showMessage("Número de líneas: " + QString::number(++m_numlineas));
+    // Actualizar la interfaz
+    update();
 }
 
 void principal::on_actionCOLOR_triggered()
@@ -111,7 +141,9 @@ void principal::on_actionCOLOR_triggered()
 
 void principal::on_actionANCHO_triggered()
 {
-    m_width = QInputDialog::getInt(this, "Ancho del pincel", "Inserte el ancho del pincel",1,1,10);
+    m_width = QInputDialog::getInt(this, "Ancho del pincel",
+                                   "Inserte el ancho del pincel",
+                                   1,1,10);
 }
 
 void principal::on_actionGUARDAR_triggered()
@@ -146,6 +178,7 @@ void principal::on_actionLINEAS_triggered()
 void principal::on_actionRECTANGULOS_triggered()
 {
     m_opcion = 3;
+    ui->actionLIBRE->setChecked(false);
 }
 
 void principal::on_actionCIRCUFERENCIA_triggered()
@@ -166,4 +199,8 @@ void principal::on_actionSALIR_triggered()
     this->close();
 }
 
+void principal::on_actionRELLENO_triggered()
+{
+    m_Brush = QColorDialog::getColor(m_Brush,this,"Color de relleno")   ;
+}
 

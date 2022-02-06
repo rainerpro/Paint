@@ -30,6 +30,8 @@ protected:
     void paintEvent(QPaintEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
+    void dibujarLineas();
+    void lineaUnica();
 
 private slots:
     void on_actionCOLOR_triggered();
@@ -50,11 +52,16 @@ private slots:
 
     void on_actionSALIR_triggered();
 
+    void on_actionRELLENO_triggered();
+
 private:
     Ui::principal *ui;
     QPen pincel;
+    QColor m_Brush;
     QColor m_color; //Color de la linea
     int m_width; //Ancho de la linea
+    int m_Orden;
+    int m_numlineas; // numero
     int m_opcion; //Opcion de dibujo
     QImage *m_imagen; //Imagen sobre la cual se va a dibujar
     QPainter *m_painter; //El objeto painter

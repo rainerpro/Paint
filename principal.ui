@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>principal</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="recursos.qrc">
+    <normaloff>:/Recursos/paint.png</normaloff>:/Recursos/paint.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -23,7 +27,7 @@
      <height>25</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuARCHIVO">
+   <widget class="QMenu" name="menu_ARCHIVO">
     <property name="title">
      <string>ARCHIVO</string>
     </property>
@@ -38,6 +42,7 @@
     </property>
     <addaction name="actionCOLOR"/>
     <addaction name="actionANCHO"/>
+    <addaction name="actionRELLENO"/>
    </widget>
    <widget class="QMenu" name="menuFORMA">
     <property name="title">
@@ -49,7 +54,7 @@
     <addaction name="actionCIRCUFERENCIA"/>
     <addaction name="actionRECTANGULOS"/>
    </widget>
-   <addaction name="menuARCHIVO"/>
+   <addaction name="menu_ARCHIVO"/>
    <addaction name="menuESTILO"/>
    <addaction name="menuFORMA"/>
   </widget>
@@ -62,6 +67,9 @@
    <property name="text">
     <string>NUEVO</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="actionGUARDAR">
    <property name="icon">
@@ -70,6 +78,9 @@
    </property>
    <property name="text">
     <string>GUARDAR</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+G</string>
    </property>
   </action>
   <action name="actionSALIR">
@@ -80,6 +91,9 @@
    <property name="text">
     <string>SALIR</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
   </action>
   <action name="actionCOLOR">
    <property name="icon">
@@ -88,6 +102,9 @@
    </property>
    <property name="text">
     <string>COLOR</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
    </property>
   </action>
   <action name="actionANCHO">
@@ -98,14 +115,23 @@
    <property name="text">
     <string>ANCHO</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+N</string>
+   </property>
   </action>
   <action name="actionLIBRE">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="recursos.qrc">
      <normaloff>:/Recursos/cepillo-de-pintura.png</normaloff>:/Recursos/cepillo-de-pintura.png</iconset>
    </property>
    <property name="text">
     <string>LIBRE</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
    </property>
   </action>
   <action name="actionLINEAS">
@@ -116,6 +142,9 @@
    <property name="text">
     <string>LINEAS </string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="actionCIRCUFERENCIA">
    <property name="icon">
@@ -125,6 +154,9 @@
    <property name="text">
     <string>CIRCUFERENCIA</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
   </action>
   <action name="actionRECTANGULOS">
    <property name="icon">
@@ -133,6 +165,18 @@
    </property>
    <property name="text">
     <string>RECTANGULOS </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionRELLENO">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/Recursos/RELLENO.PNG</normaloff>:/Recursos/RELLENO.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>RELLENO</string>
    </property>
   </action>
  </widget>
