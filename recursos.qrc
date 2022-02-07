@@ -11,5 +11,7 @@
         <file>Recursos/linea-diagonal.png</file>
         <file>Recursos/rectangulo.png</file>
         <file>Recursos/RELLENO.PNG</file>
+        <file>paint_japones.qm</file>
+        <file>paint_portuges.qm</file>
     </qresource>
 </RCC>
