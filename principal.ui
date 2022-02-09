@@ -54,9 +54,16 @@
     <addaction name="actionCIRCUFERENCIA"/>
     <addaction name="actionRECTANGULOS"/>
    </widget>
+   <widget class="QMenu" name="menuACERCA_DE">
+    <property name="title">
+     <string>AYUDA</string>
+    </property>
+    <addaction name="actionACERCA_DE"/>
+   </widget>
    <addaction name="menu_ARCHIVO"/>
    <addaction name="menuESTILO"/>
    <addaction name="menuFORMA"/>
+   <addaction name="menuACERCA_DE"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNUEVO">
@@ -177,6 +184,11 @@
    </property>
    <property name="text">
     <string>RELLENO</string>
+   </property>
+  </action>
+  <action name="actionACERCA_DE">
+   <property name="text">
+    <string>ACERCA DE</string>
    </property>
   </action>
  </widget>

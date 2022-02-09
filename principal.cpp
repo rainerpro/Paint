@@ -204,3 +204,15 @@ void principal::on_actionRELLENO_triggered()
     m_Brush = QColorDialog::getColor(m_Brush,this,"Color de relleno")   ;
 }
 
+void principal::on_actionACERCA_DE_triggered()
+{
+    // Crear un objeto de la ventana que queremos invocar
+    acerca *dialogo = new acerca(this);
+    // Enviar parámetro a la ventana
+    dialogo->setVersion(VERSION);
+    // Mostrar la ventana (diálogo) MODAL
+    dialogo->exec();
+    // Obtener datos de la ventana
+    qDebug() << dialogo->valor();
+}
+

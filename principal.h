@@ -12,6 +12,9 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QtGui>
+#include "acerca.h"
+#define VERSION "1.0"
 #define DEFAULT_ANCHO 2;
 
 QT_BEGIN_NAMESPACE
@@ -53,6 +56,8 @@ private slots:
     void on_actionSALIR_triggered();
 
     void on_actionRELLENO_triggered();
+
+    void on_actionACERCA_DE_triggered();
 
 private:
     Ui::principal *ui;
